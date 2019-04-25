@@ -136,7 +136,7 @@ root.isIOSDevice = true;
 	
 	
 	
-	if(isset($_POST['verifyPassword'])){
+	if(isset($_POST['password'])){
 		
 		if(empty($_POST['password'])){
 			
